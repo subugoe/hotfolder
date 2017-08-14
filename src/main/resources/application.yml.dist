@@ -1,0 +1,13 @@
+app:
+  source:
+    hostname:   "example.com"
+    username:   "mygreatuser"
+    password:   "mygreatpassword"
+    path:       "mygreatdirectory"
+    target:     "file:///home/yo/foo/"
+
+  aws:
+    secret:     "myfancysecret"
+    access:     "myaccesskey"
+    url:        "s3.example.com"
+    bucket:     "yo"

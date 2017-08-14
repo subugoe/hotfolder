@@ -1,11 +1,16 @@
 package de.unigoettingen.sub.hotfolder
 
+import org.springframework.boot.Banner
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-class HotfolderApplication
+class HotfolderApplication {
+}
 
 fun main(args: Array<String>) {
-    SpringApplication.run(HotfolderApplication::class.java, *args)
+        val app = SpringApplication(HotfolderApplication::class.java)
+            app.setBannerMode(Banner.Mode.OFF)
+            app.isWebEnvironment = false
+            app.run(*args)
 }
