@@ -1,15 +1,14 @@
 package de.unigoettingen.sub.hotfolder.Configuration
 
+import org.jetbrains.annotations.NotNull
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-@ConfigurationProperties("app.aws")
-open class AwsConfiguration {
-
-    var url: String = ""
-    var access: String = ""
-    var secret: String = ""
-    var bucket: String = ""
-
+@ConfigurationProperties(prefix = "app.aws")
+class AwsConfiguration {
+    @NotNull lateinit var url: String
+    @NotNull lateinit var access: String
+    @NotNull lateinit var secret: String
+    @NotNull lateinit var bucket: String
 }

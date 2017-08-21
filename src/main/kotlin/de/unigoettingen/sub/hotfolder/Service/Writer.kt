@@ -11,10 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 @Component
-class Writer() {
+class Writer {
 
     @Autowired
-    lateinit var awsConfiguration:AwsConfiguration
+    lateinit var awsConfiguration: AwsConfiguration
 
     fun writeFile(name: String, content: String) {
         val clientConfig = ClientConfiguration()
