@@ -19,6 +19,7 @@ class Routing:RouteBuilder() {
             from("sftp://${username}@${hostname}${path}?password=${password}&idempotent=true&readLock=changed")
                 .to(target)
                 .to("bean:de.unigoettingen.sub.hotfolder.Service.IdRetriever?method=getId")
-
+                .to("bean:de.unigoettingen.sub.hotfolder.Service.ImageWriter?method=writeImages")
+                .to("bean:de.unigoettingen.sub.hotfolder.Service.ApiCaller?method=informAboutNewWork")
         }
 }
