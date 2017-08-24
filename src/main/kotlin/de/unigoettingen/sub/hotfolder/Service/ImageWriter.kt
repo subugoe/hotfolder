@@ -12,7 +12,7 @@ class ImageWriter {
     lateinit var awsConfiguration: AwsConfiguration
 
     fun writeImages(directory: String): String {
-        LoggerFactory.getLogger("ImageWriter").info("Wrote ${directory}")
+        LoggerFactory.getLogger("ImageWriter").info("Wrote images for ${directory}")
 
         return directory
     }
