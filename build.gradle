@@ -1,8 +1,8 @@
 buildscript {
     ext {
-        kotlinVersion = '1.1.4'
-        springBootVersion = '1.5.6.RELEASE'
-        camelVersion = '2.19.2'
+        kotlinVersion = '1.1.51'
+        springBootVersion = '1.5.8.RELEASE'
+        camelVersion = '2.20.0'
     }
     repositories {
         mavenCentral()
@@ -41,7 +41,6 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
     compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     compile('org.springframework.boot:spring-boot-configuration-processor')
-    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.apache.httpcomponents:httpclient:4.5.3")
     runtime('org.springframework.boot:spring-boot-devtools')
     testCompile('org.springframework.boot:spring-boot-starter-test')

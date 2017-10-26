@@ -27,7 +27,13 @@ class IdRetriever {
 
         val dbi = DocumentBuilderFactory.newInstance()
         dbi.setNamespaceAware(true)
-        val xmlDocument = dbi.newDocumentBuilder().parse(InputSource(StringReader(content)))
+        val xmlDocument = dbi.newDocumentBuilder()
+        try {
+            xmlDocument.parse(InputSource(StringReader(content))) }
+        catch (e:org.xml.sax.SAXParseException) {
+            LoggerFactory.getLogger("idGenerator").error(content)
+            return ""
+        }
         val xPathProcessor = XPathFactory.newInstance().newXPath()
         xPathProcessor.setNamespaceContext(NamespaceResolver())
 

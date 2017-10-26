@@ -16,7 +16,7 @@ class Routing:RouteBuilder() {
 
     @Throws(Exception::class)
         override fun configure() {
-            from("sftp://${username}@${hostname}${path}?password=${password}&idempotent=true&readLock=changed")
+            from("sftp://${username}@${hostname}${path}?password=${password}&idempotent=true&readLock=changed&recursive=true")
                 .to(target)
                 .to("bean:de.unigoettingen.sub.hotfolder.Service.IdRetriever?method=getId")
                 .to("bean:de.unigoettingen.sub.hotfolder.Service.ImageWriter?method=writeImages")
