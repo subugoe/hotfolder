@@ -15,7 +15,10 @@ buildscript {
     }
 }
 
-apply plugin: 'kotlin'
+plugins {
+    'kotlin'
+}
+
 apply plugin: 'kotlin-spring'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
