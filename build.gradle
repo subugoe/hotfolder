@@ -24,10 +24,10 @@ apply plugin: "kotlin-allopen"
 version = '0.1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = sourceCompatibility
 }
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = sourceCompatibility
 }
 
 repositories {
